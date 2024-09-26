@@ -2,6 +2,7 @@ package main
 
 import (
 	"CoreFlow/cmd"
+	"CoreFlow/config"
 	"CoreFlow/internal/database"
 	"database/sql"
 	"fmt"
@@ -10,18 +11,8 @@ import (
 	"github.com/spf13/viper"
 )
 
-func initConfig() {
-	viper.SetConfigName("config")
-	viper.SetConfigType("yaml")
-	viper.AddConfigPath(".")
-
-	if err := viper.ReadInConfig(); err != nil {
-		log.Fatalf("Error reading config file: %v", err)
-	}
-}
-
 func main() {
-	initConfig()
+	config.InitConfig()
 
 	dbConfig := database.Config{
 		Host:     viper.GetString("database.host"),
