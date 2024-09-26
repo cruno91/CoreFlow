@@ -1,12 +1,15 @@
 package contententity
 
-import "time"
+import (
+	"github.com/google/uuid"
+	"time"
+)
 
 type ContentEntity struct {
-	ID             string                 // Unique ID for the content entity
-	ConfigEntityID string                 // ID of the associated config entity
-	Fields         map[string]interface{} // Map of field values
-	CreatedAt      time.Time              // Timestamp of creation
-	UpdatedAt      time.Time              // Timestamp of last update
-	Metadata       map[string]string      // Additional metadata
+	ID             uuid.UUID              `json:"id"`
+	ConfigEntityID uuid.UUID              `json:"configEntityId"`
+	Fields         map[string]interface{} `json:"fields"`
+	CreatedAt      time.Time              `json:"createdAt"`
+	UpdatedAt      time.Time              `json:"updatedAt"`
+	Metadata       map[string]string      `json:"metadata"`
 }

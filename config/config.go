@@ -9,7 +9,7 @@ func InitConfig() {
 	// Set the file name of the configurations file
 	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
-	viper.AddConfigPath("../../")
+	viper.AddConfigPath(".")
 
 	// Read in the config file
 	if err := viper.ReadInConfig(); err != nil {
