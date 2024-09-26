@@ -1,16 +1,16 @@
 package configentity
 
 type FieldDefinition struct {
-	Name     string            `json:"name"`
-	Type     string            `json:"type"`
-	Required bool              `json:"required"`
-	Settings map[string]string `json:"settings"`
+	Name     string            // Field name (e.g., "title")
+	Type     string            // Data type (e.g., "string", "text", "int")
+	Required bool              // Whether the field is required
+	Settings map[string]string // Additional settings (e.g., max length)
 }
 
 type ConfigEntity struct {
-	ID          string            `json:"id"`
-	Name        string            `json:"name"`
-	Fields      []FieldDefinition `json:"fields"`
-	PathPattern string            `json:"pathPattern"`
-	Metadata    map[string]string `json:"metadata"`
+	ID          string            // Unique ID for the config entity
+	Name        string            // Name of the content type
+	Fields      []FieldDefinition // List of field definitions
+	PathPattern string            // Path alias pattern (e.g., "/articles/{title}")
+	Metadata    map[string]string // Additional metadata
 }
