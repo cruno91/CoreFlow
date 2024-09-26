@@ -1,7 +1,7 @@
 /*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-
+Copyright © 2024 Chris Runo chris.runo@gmail.com
 */
+
 package main
 
 import "CoreFlow/cmd"

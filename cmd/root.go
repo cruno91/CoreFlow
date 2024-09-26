@@ -1,6 +1,5 @@
 /*
 Copyright © 2024 Chris Runo <chris.runo@gmail.com>
-
 */
 
 // Package cmd
