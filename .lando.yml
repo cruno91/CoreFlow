@@ -1,0 +1,5 @@
+name: entity-nexus
+services:
+  database:
+    type: postgres
+    portforward: true
