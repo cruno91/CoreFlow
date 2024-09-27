@@ -8,6 +8,8 @@ import (
 type ContentEntity struct {
 	ID             uuid.UUID              `json:"id"`
 	ConfigEntityID uuid.UUID              `json:"configEntityId"`
+	Bundle         string                 `json:"bundle"`
+	Name           string                 `json:"name"`
 	Fields         map[string]interface{} `json:"fields"`
 	CreatedAt      time.Time              `json:"createdAt"`
 	UpdatedAt      time.Time              `json:"updatedAt"`
